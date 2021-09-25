@@ -6,9 +6,18 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "cors": "^2.8.5",
+    "express-session": "^1.17.2",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.0.7",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.13",
+    "passport": "^0.5.0",
+    "path": "^0.12.7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
+    "session": "^0.1.0",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
@@ -33,6 +42,7 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
-    ]
+    ],
+    "proxy": "http://localhost:4000"
   }
 }
