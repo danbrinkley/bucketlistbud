@@ -1,0 +1,59 @@
+body {
+    background-color: #faf0ca;
+}
+
+.login-page-ctr {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.login-ctr {
+    margin-top: 200px;
+    padding: 0;
+    width: 650px;
+    height: 700px;
+    background-color: #1f3960;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-ctr {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    flex: 60%;
+}
+img {
+    padding-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    
+}
+
+.login-text {
+    display: flex;
+    padding-top: 0;
+    flex: 20%;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding: 0px 10px 0px 10px;
+}
+
+.google-button {
+    display: flex;
+    flex: 20%;
+    padding-top: 20px;
+}
+
+hr {
+    width:80%;
+}
