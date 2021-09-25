@@ -15,8 +15,13 @@ const routes = require("./routes");
 /* ==== Instanced Modules  ==== */
 const app = express(); // create express app
 
+//Mongodb and mongoose connection
+require('./config/database');
+require("./config/passport");
+require('body-parser');
+
 /* ====  Configuration  ==== */
-const PORT = process.env.PORT || 5000;
+const PORT = 4000;
 
 /* ====  Middleware  ==== */
 
