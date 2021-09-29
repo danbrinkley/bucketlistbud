@@ -11,8 +11,6 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 const session = require('express-session');
 const methodOverride = require('method-override');
-const path = require("path");
-const cors = require("cors");
 //Makes express a variable that can be used
 const app = express();
 
@@ -21,13 +19,16 @@ require('./config/database');
 require("./config/passport");
 require('body-parser');
 
+//Sets views to ejs
+
+app.set('view engine', 'ejs');
 
 const PORT = 4000;
 //Routes
-const routes = require("./routes");
+const indexRouter = require('./routes/index');
+const authRouter = require('./routes/auth');
+const tripsRouter = require('./routes/trips');
 
-app.use(cors());
-app.use(express.static(path.join(__dirname, "..", "build")));
 app.use(express.static('public'));
 app.use(morgan('dev'))
 app.use(express.json());
@@ -55,23 +56,19 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use("/api", routes);
-//This is to catch anything that's trying to hit an api route that isn't made
-app.all("/api/*", function (req, res, next) {
-  res.send("THIS IS NOT AN API ROUTE");
-});
-
 //pass user globally
 app.use(function (req, res, next) {
   res.locals.user = req.user || null
   next()
 })
+// //Server uses indexRouter at url of /
+app.use('/', indexRouter);
 
-app.use((req, res, next) => {
-  console.log(req.headers);
-  res.sendFile(path.join(__dirname, "..", "build", "index.html"));
-});
-
+// //Server uses tripsRouter at url of /trips
+app.use('/trips', tripsRouter);
+// app.use('/user', userRouter);
+//Server listen at localhost://port
+app.use("/", authRouter);
 
 app.listen(PORT, () => {
     console.log(`reporting live from localhost://${PORT}`)

@@ -5,9 +5,7 @@
         integrity="sha256-bEIQpI72w9NJuIVhTLFUF2/8uxl0u5800r8ddViuv+o=" crossorigin="anonymous"></script>
 
 <script>
-    $(document).ready(function(){
-        $(".dropdown-button").dropdown();
-      })
+        M.Sidenav.init(document.querySelector('.sidenav'))
         M.FormSelect.init(document.querySelector('select'))
         CKEDITOR.replace('body', {
             plugins: 'wysiwygarea, toolbar, basicstyles, link'
