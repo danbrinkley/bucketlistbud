@@ -1,26 +1,49 @@
-p {
-    margin: 10px 0 !important;
+
+body {
+  background-color: #faf0ca;
+}  
+
+
+h5 {
+  color: white;
+  text-align: center;
+}
+
+.login-container {
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    background-color: #1f3960;
+    height: 500px;
+    width: 600px; 
   }
   
-  #landing-page {
-      background-color: rgba(243, 180, 62, 0.981);
-  }
-  .login-container {
-    width: 400px;
-    margin-top: 100px;
-    text-align: center;
-  }
-  
-  .fa-small {
+.fa-small {
     font-size: 14px !important;
   }
   
-  .btn-float {
+.btn-float {
     float: left;
     margin-right: 10px;
 
   }
   
-  .img-small {
+.img-small {
     width: 180px;
   }
+
+.image-ctr {
+  width: 100%;
+  height: 100px;
+}
+
+.caption-ctr {
+  padding: 0px 20px;
+}
+

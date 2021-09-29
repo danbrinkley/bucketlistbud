@@ -14,6 +14,7 @@ const methodOverride = require('method-override');
 //Makes express a variable that can be used
 const app = express();
 
+
 //Mongodb and mongoose connection
 require('./config/database');
 require("./config/passport");
@@ -21,15 +22,16 @@ require('body-parser');
 
 //Sets views to ejs
 
-app.set('view engine', 'ejs');
 
 const PORT = 4000;
+
+app.set('view engine', 'ejs');
 //Routes
 const indexRouter = require('./routes/index');
 const authRouter = require('./routes/auth');
 const tripsRouter = require('./routes/trips');
 
-app.use(express.static('public'));
+app.use(express.static('public'))
 app.use(morgan('dev'))
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
