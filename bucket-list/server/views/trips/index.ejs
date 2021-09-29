@@ -1,0 +1,37 @@
+<%- include('../partials/header') %>
+   
+  <h1 class="center">All Trips</h1>
+  <% if (trips.length) { %>
+    <div class ="row">
+      <% trips.forEach(trip => { %>
+        <div class="col s4 m4">
+          <div class="card">
+              <div class="card">
+              <div class="card-content center-align">
+                <h5><%= trip.title %></h5>
+                <div>
+                  <img src="<%= trip.user.image %>" alt="profile-image" class="circle small">
+                  <br> 
+                  <a href="/trips/user/<%= user._id %>"><%= trip.user.name %></a>
+                  
+              </div>
+                
+              </div>
+          <div class="card-action center-align">
+            
+            <a href="/trips/<%= trip._id %>" class="btn blue small">Details</a>
+          </div>
+        </div>
+      </div>
+      </div>
+  
+  <% }) %>
+  <% } else { %>
+    <h5>You have no trips on your list. Please Add Below.</h5>
+    <% } %>
+</div>            
+<div class="fixed-action-btn">
+  <a href="/trips/new" class="btn-floating btn-large waves-effect waves-light blue"><i class="fas fa-plus"></i></a>
+</div>               
+<%- include('../partials/footer') %>
+ 

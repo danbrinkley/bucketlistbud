@@ -1,0 +1,53 @@
+p {
+    margin: 10px 0 !important;
+  }
+nav {
+  background-color: #1f3960;
+}
+  #landing-page {
+      background-color: #faf0ca;
+  }
+.login-container {
+    width: 400px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.card-content-login {
+    background-color: #1f3960;
+  }
+.login-logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+ }
+
+.login-logo > img {
+    width: 450px;
+    height: 250px;
+    
+}
+
+.login-text {
+  color: white;
+  padding: 0px 10px 2px 10px;
+}
+
+.nav-bar{
+  height: 100px;
+}
+
+
+  .fa-small {
+    font-size: 14px !important;
+  }
+  
+  .btn-float {
+    float: left;
+    margin-right: 10px;
+
+  }
+  
+  .img-small {
+    width: 180px;
+  }

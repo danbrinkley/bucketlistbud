@@ -1,0 +1,41 @@
+<%- include('../partials/header') %>
+  <div class='content-stack'>
+    <h2>Edit Trips</h2>
+    <form action="/trips/<%= trips._id %>" method="POST">
+        <input type="hidden" name="_method" value="PUT">
+        <label>
+            Trip:
+            <input type="text" name="title" value="<%= trips.title %>"/>
+        </label>
+        <label>
+            Location:
+            <input type="text" name="location" value="<%= trips.location %>"/>
+        </label>
+
+        <label>
+            Date:
+            <input type="datetime-local" name="eventDate" value="<%= trips.eventDate %>"/>
+        </label>
+
+        <label>
+          Describe Your Bucket List Travel Location:
+          <input type="text" name="description" value="<%= trips.description %>"/>
+        </label>
+       
+        <div class="input-field col s12">
+            <select name="stay">
+              <option value="" disabled selected>Choose your stay</option>
+              <option value="Hotel">Hotel</option>
+            <option value="AirBnB">AirBnB</option>
+            <option value="With Family/Friends">With Family/Friends</option>
+            <option value="Be a Nomad">Be a Nomad</option>
+            </select>
+            <label>Where would you want to stay?</label>
+          </div>
+        <input type="submit" value="UPDATE" />
+    </form>
+  </div>
+</body>
+</html>
+
+<%- include('../partials/footer') %>

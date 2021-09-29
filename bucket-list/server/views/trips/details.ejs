@@ -1,0 +1,34 @@
+<%- include('../partials/header') %>
+  <h5>Trip Details</h5>
+    <section>
+       
+       
+    </section>
+
+   
+      <div class="row">
+        <div class="card blue darken-1 medium">
+          <div class="card-content white-text">
+            <span class="card-title"><%= trips.title %></span>
+            <div>Location: <%= trips.location %></div>
+              <div>Date: <%= trips.eventDate %></div>
+                
+                <div>Description: <%= trips.description %></div>
+                <div>Stay: <%= trips.stay %></div>
+               
+            
+                
+          
+          <div class="card-action">
+            <a href="/trips/edit/<%= trips._id %>/" class="btn-floating left btn-small waves-effect waves-light orange"><i class="fas fa-edit"></i></a></td>
+            <form action="/trips/<%= trips._id %>" method="POST" id="delete-trips"> 
+              <input type="hidden" name="_method" value="DELETE">
+              <button type="submit" class="btn-medium btn red btn-floating right">
+                <i class="fas fa-trash"></i>
+            </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%- include('../partials/footer') %>
