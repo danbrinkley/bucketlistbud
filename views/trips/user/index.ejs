@@ -11,25 +11,34 @@
   
 </head>
 <body>
-  <nav class="orange darken-1">
-    <div class="nav-wrapper container">
+  <nav>
+    <div class="nav-ctr">
 
-        <a href="#!" class="brand-logo center">Bucket List Buddy</a>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger show-on-large"><i class="fas fa-bars"></i></a>
-        <ul class="sidenav" id="mobile-demo">
-            <li><a href="/trips">All Bucket List Trips</a></li>
-            <li><a href="/auth/logout">Logout</a></li>
-        </ul>
+        <div class='header-logo'>
+          <a href="/trips" alt="home">
+          <img src="/images/header_logo.png" alt="logo"></a>
+          </div>
+
+            <div class="my-trips-btn">
+              <a href="/trips %>"><button>ALL TRIPS</button></a>
+              </div>
+              
+
+        
+        
+        <div class="logout">
+          <a href="/auth/logout"><button>LOGOUT</button></a>
+        </div>
+      
     </div>
   </nav>
-  <div class = "container">
-    
-
+  
     <h3>Hi, <%= user.name %></h3>  
+    <h5 id="dashboard-header">Your Bucket List!</h5>
 
- 
-<h5>Your Bucket List!</h5>
+ <div class="dashboard-ctr">
   <% if (trips.length) { %>
+    <div class="table-ctr">
     <table class= "striped">
       <thead>
         <tr>
@@ -63,6 +72,8 @@
     <% } else { %>
     <h5>You have no trips on your list. Please Add Below. </h5>
     <% } %>
+  </div>
+</div>
 </div>
 <div class="fixed-action-btn">
     <a href="/trips/new" class="btn-floating btn-large waves-effect waves-light blue"><i class="fas fa-plus"></i></a>

@@ -11,7 +11,28 @@
   
 </head>
 <body>
-  <nav class="orange darken-1">
+  <nav>
+    <div class="nav-ctr">
+
+        <div class='header-logo'>
+          <a href="/trips" alt="home">
+          <img src="/images/header_logo.png" alt="logo"></a>
+          </div>
+
+            <div class="my-trips-btn">
+              <a href="/trips/user/<%= user %>"><button>MY TRIPS</button></a>
+              </div>
+              
+
+        
+        
+        <div class="logout">
+          <a href="/auth/logout"><button>LOGOUT</button></a>
+        </div>
+      
+    </div>
+  </nav>
+  <!-- <nav class="nav-ctr">
     <div class="nav-wrapper container">
 
         <a href="#!" class="brand-logo center ">Bucket List Buddy</a>
@@ -20,47 +41,49 @@
           <li><a href="/trips">All Bucket List Trips</a></li>
           <li><a href="/trips/user/<%= user %>">Your Bucket List</a></li>
           <li><a href="/auth/logout">Logout</a></li>
+          <li><a href="/auth/logout">Logout</a></li>
         </ul>
     </div>
-  </nav>
-  <div class = "container">
-
-  <main>
-   
+  </nav> -->
+  
+   <div class="new-form-ctr">
   <div class='content-stack'>
     <h2>Add to Your Bucket List!</h2>
-    <form action="/trips" method="POST">
+    <div class="input-field col s12">
+    <form action="/trips" method="POST" class="new-form">
         <label>
             Trip:
-            <input type="text" name="title"/>
+            <input type="text" name="title" id="new"/>
         </label>
         <label>
             Location:
-            <input type="text" name="location"/>
+            <input type="text" name="location" id="new"/>
         </label>
 
         <label>
             Date:
-            <input type="datetime-local" name="eventDate" />
+            <input type="datetime-local" name="eventDate" id="new"/>
         </label>
 
         <label>
           Describe Your Bucket List Travel Location:
-          <input type="text" name="description" />
+          <input type="text" name="description" id="new"/>
         </label>
         <div class="input-field col s12">
-          <select name="stay">
+          <select name="stay" id="new">
             <option value="stayOpt" >Choose your stay</option>
             <option value="Hotel">Hotel</option>
           <option value="AirBnB">AirBnB</option>
           <option value="With Family/Friends">With Family/Friends</option>
           <option value="Be a Nomad">Be a Nomad</option>
           </select>
-          <label>Where would you want to stay?</label>
+          <label >Where would you want to stay?</label>
         </div>
-        <input type="submit" value="Add Trip" />
+        <input type="submit" value="Add Trip" id="add-submit-btn"/>
     </form>
   </div>
+</div>
+</div>
 </body>
 </html>
 

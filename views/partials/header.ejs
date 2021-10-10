@@ -11,19 +11,40 @@
   
 </head>
 <body>
-  <nav class="orange darken-1">
-    <div class="nav-wrapper container">
+  <nav>
+    <div class="nav-ctr">
 
-        <a href="#!" class="brand-logo center ">Bucket List Buddy</a>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger show-on-large"><i class="fas fa-bars"></i></a>
-        <ul class="sidenav" id="mobile-demo">
-          <li><a href="/trips">All Bucket List Trips</a></li>
-          <li><a href="/trips/user/<%= user._id %>">Your Bucket List</a></li>
-          <li><a href="/auth/logout">Logout</a></li>
+        <div class='header-logo'>
+          <img src="/images/header_logo.png" alt="header logo">
+          </div>
+
+          <div class="user-ctr" id="nav-user-ctr">
+            <div class="user-image" id="nav-user-image">
+            <img src="<%= user.image %>" alt="profile-image" class="circle small">
+            </div>
+
+            <div class="user-name" id="nav-user-name">
+              <a href="/trips/user/<%= user._id %>"><%= user.name %></a>
+              </div>
+              </div>
+        <!-- <div class="search-ctr">
+          <form>
+          <button id="search-btn">Search</button>
+            <input id="search" type="text" value="Search">
+          </form>
+        </div>   -->
+        <div class="drop-ctr" id="nav-drop-ctr">
+        <a class='dropdown-trigger btn orange' href='#' data-target='dropdown'><i class="fas fa-angle-down medium"></i></a>
+        </div>
+        
+        
+        <ul class="dropdown-content" id="dropdown">
+          <!-- <li><a href="/trips">All Bucket List Trips</a></li>
+          <li><a href="/trips/user/<%= user._id %>">Your Bucket List</a></li> -->
+          <li><a href="/auth/logout" ><p>Logout</p></a></li>
         </ul>
+      
     </div>
   </nav>
-  <div class = "container">
-
-  <main>
+  
    

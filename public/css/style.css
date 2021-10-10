@@ -1,14 +1,46 @@
 
 body {
   background-color: #faf0ca;
-}  
-
+}
+h3 {
+  padding-top: 30px;
+  text-align: center;
+  color: #1f3960;
+}
 
 h5 {
   color: white;
   text-align: center;
 }
 
+
+.nav-ctr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1f3960;
+  height: 110px;
+  padding-right: 100px;
+  padding-left: 100px;
+}
+
+.header-logo {
+  margin-left: 0px;
+  min-width: 600px;
+  padding-top: 10px;
+  flex: 0.8
+}
+
+#nav-user-ctr {
+  flex: .15;
+}
+#nav-drop-ctr {
+  flex: .05;
+}
+#nav-user-image {
+  width: 50px;
+  height: 50px;
+}
 .login-container {
     display: flex; 
     flex-direction: column;
@@ -39,11 +71,201 @@ h5 {
   }
 
 .image-ctr {
+  display: flex;
+  align-items: center;
   width: 100%;
-  height: 100px;
+ 
+  
+
+}
+.login-image-ctr > img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
+#login-img {
+  height: 50px;
+}
 .caption-ctr {
   padding: 0px 20px;
 }
 
+
+.search-ctr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+}
+
+#search {
+  background-color: white;
+  width: 300px;
+  padding: 3px;
+  height: 35px;
+  
+}
+#search-btn {
+  background-color: #f4d35e;
+  font-size: 37px;
+  padding-bottom: 1px;
+}
+
+/* Pen */
+
+.trips-page-ctr {
+  align-items: center;
+
+}
+.card-ctr {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 400px;
+  border: 1px solid black;
+}
+.image-ctr > img {
+  width: 300px;
+  height: 325px;
+  border-radius: 15px;
+}
+.image-ctr {
+  position: relative;
+}
+
+.flex-body-ctr {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 800px;
+  height: 1000px;
+}
+
+.post-title {
+  font-size: 24px;
+  font-weight: bolder;
+  padding-left: 5px;
+}
+
+.user-image > img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.user-image {
+ padding-right: 3px;
+}
+.user-ctr {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 5px;
+}
+
+.user-name{
+  font-size: 20px;
+}
+
+.clickme {
+  position: absolute;
+  top: 85%;
+  left: 80%;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: white;
+}
+
+p {
+  color: black;
+}
+
+.my-trips-btn {
+  padding: 25px;
+}
+
+button {
+  padding: 5px;
+  font-size: 20px;
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+
+button:hover {
+  background-color: #ff551d;
+  padding: 10px;
+}
+.new-form-ctr, .edit-form-ctr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content-stack {
+  width: 40%;
+  margin-top: 100px;
+  border: 1px solid black;
+  background-color: white;
+  padding: 25px;
+}
+
+.content-stack > h2 {
+  text-align: center;
+  color: #1f3960;
+}
+
+.input-field label {
+  color: #ff551d;
+  font-size: 26px;
+  padding: 5px;
+}
+
+.input-field input[type=text] {
+  border-bottom: 1px solid #1f3960;
+}
+
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid #1f3960;
+}
+
+#new {
+  padding: 10px;
+}
+.select-wrapper {
+  padding: 20px;
+  font-size: 16px;
+}
+
+#add-submit-btn {
+  color: white;
+  background-color: #1f3960;
+  padding: 10px;
+  font-size: 26px;
+}
+
+#add-submit-btn:hover {
+  background-color: #ff551d;
+}
+
+.dashboard-ctr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  margin-right: 300px;
+  margin-left: 300px;
+  padding-top: 10px;
+
+}
+#dashboard-header {
+  color: #ff551d;
+  text-align: center;
+}
+
+#details-card {
+  margin-right: 300px;
+  margin-left: 300px;
+  padding-top: 10px;
+}

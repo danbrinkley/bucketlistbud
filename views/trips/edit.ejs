@@ -1,6 +1,42 @@
-<%- include('../partials/header') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  <link rel='stylesheet' href='/css/style.css' />
+
+  
+</head>
+<body>
+  <nav>
+    <div class="nav-ctr">
+
+        <div class='header-logo'>
+          <a href="/trips" alt="home">
+            <img src="/images/header_logo.png" alt="logo"></a>
+          </div>
+
+            <div class="my-trips-btn">
+              <a href="/trips/user/<%= user %>"><button>MY TRIPS</button></a>
+              </div>
+              
+
+        
+        
+        <div class="logout">
+          <a href="/auth/logout"><button>LOGOUT</button></a>
+        </div>
+      
+    </div>
+  </nav>
+
+  <div class="edit-form-ctr">
   <div class='content-stack'>
     <h2>Edit Trips</h2>
+    <div class="input-field col s12">
     <form action="/trips/<%= trips._id %>" method="POST">
         <input type="hidden" name="_method" value="PUT">
         <label>
@@ -32,8 +68,10 @@
             </select>
             <label>Where would you want to stay?</label>
           </div>
-        <input type="submit" value="UPDATE" />
+        <input type="submit" value="UPDATE" id="add-submit-btn" />
     </form>
+  </div>
+  </div>
   </div>
 </body>
 </html>

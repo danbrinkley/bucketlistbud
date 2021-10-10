@@ -1,14 +1,46 @@
-<%- include('../partials/header') %>
-  <h5>Trip Details</h5>
-    <section>
-       
-       
-    </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  <link rel='stylesheet' href='/css/style.css' />
 
-   
-      <div class="row">
-        <div class="card blue darken-1 medium">
-          <div class="card-content white-text">
+  
+</head>
+<body>
+  <nav>
+    <div class="nav-ctr">
+
+        <div class='header-logo'>
+          <a href="/trips" alt="home">
+          <img src="/images/header_logo.png" alt="logo"></a>
+          </div>
+
+            <div class="my-trips-btn">
+              <a href="/trips/user/<%= user %>"><button>MY TRIPS</button></a>
+              </div>
+              
+
+        
+        
+        <div class="logout">
+          <a href="/auth/logout"><button>LOGOUT</button></a>
+        </div>
+      
+    </div>
+  </nav>
+  
+  <h3>Trip Details</h3>
+      <div class="col s12 m7">
+        <div class="card horizontal white medium" id="details-card">
+          <div class="card-image">
+          <img src="/images/boat.jpg" alt="details-image">
+        </div>
+          <div class="card-stacked">
+          <div class="card-content black-text">
             <span class="card-title"><%= trips.title %></span>
             <div>Location: <%= trips.location %></div>
               <div>Date: <%= trips.eventDate %></div>
@@ -16,7 +48,7 @@
                 <div>Description: <%= trips.description %></div>
                 <div>Stay: <%= trips.stay %></div>
                
-            
+              </div>
                 
           
           <div class="card-action">
