@@ -20,7 +20,7 @@
           </div>
 
             <div class="my-trips-btn">
-              <a href="/trips/user/<%= user %>"><button>MY TRIPS</button></a>
+              <a href="/trips%>"><button>ALL TRIPS</button></a>
               </div>
               
 
@@ -41,18 +41,18 @@
         </div>
           <div class="card-stacked">
           <div class="card-content black-text">
-            <span class="card-title"><%= trips.title %></span>
-            <div>Location: <%= trips.location %></div>
-              <div>Date: <%= trips.eventDate %></div>
+            <span class="card-title">"<%= trips.title %>"</span>
+            <p><span class="details-type">Location: </span><%= trips.location %></p>
+              <p><span class="details-type">Date:</span> <%= trips.eventDate %></p>
                 
-                <div>Description: <%= trips.description %></div>
-                <div>Stay: <%= trips.stay %></div>
+              <p><span class="details-type">Description: </span><%= trips.description %></p>
+              <p><span class="details-type">Stay:</span> <%= trips.stay %></p>
                
               </div>
                 
           
           <div class="card-action">
-            <a href="/trips/edit/<%= trips._id %>/" class="btn-floating left btn-small waves-effect waves-light orange"><i class="fas fa-edit"></i></a></td>
+            <a href="/trips/edit/<%= trips._id %>/" class="btn-floating left btn-medium waves-effect waves-light orange"><i class="fas fa-edit"></i></a></td>
             <form action="/trips/<%= trips._id %>" method="POST" id="delete-trips"> 
               <input type="hidden" name="_method" value="DELETE">
               <button type="submit" class="btn-medium btn red btn-floating right">

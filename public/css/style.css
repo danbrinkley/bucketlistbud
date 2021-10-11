@@ -12,7 +12,23 @@ h5 {
   color: white;
   text-align: center;
 }
+p {
+  color: black;
+  font-size: 16px;
+}
 
+button {
+  padding: 5px;
+  font-size: 20px;
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+
+button:hover {
+  background-color: #ff551d;
+  padding: 10px;
+}
 
 .nav-ctr {
   display: flex;
@@ -115,10 +131,7 @@ h5 {
 
 /* Pen */
 
-.trips-page-ctr {
-  align-items: center;
 
-}
 .card-ctr {
   display: flex;
   flex-direction: column;
@@ -135,12 +148,12 @@ h5 {
   position: relative;
 }
 
-.flex-body-ctr {
+.trips-page-ctr {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
-  width: 800px;
+  width: 100%;
   height: 1000px;
+  border: 1px solid green;
 }
 
 .post-title {
@@ -178,26 +191,12 @@ h5 {
   color: white;
 }
 
-p {
-  color: black;
-}
 
 .my-trips-btn {
   padding: 25px;
 }
 
-button {
-  padding: 5px;
-  font-size: 20px;
-  background-color: transparent;
-  color: white;
-  border: none;
-}
 
-button:hover {
-  background-color: #ff551d;
-  padding: 10px;
-}
 .new-form-ctr, .edit-form-ctr {
   display: flex;
   justify-content: center;
@@ -265,7 +264,27 @@ button:hover {
 }
 
 #details-card {
-  margin-right: 300px;
-  margin-left: 300px;
-  padding-top: 10px;
+  margin-right: 350px;
+  margin-left: 350px;
+}
+
+.details-type {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.card-title {
+  font-weight: bolder;
+  font-size: 30px;
+  color:#ff551d;
+}
+
+.page-ctr {
+  display: flex;
+  
+}
+
+.row {
+  margin-right: 50px;
+  margin-left: 50px;
 }
