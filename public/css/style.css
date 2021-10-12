@@ -2,19 +2,27 @@
 body {
   background-color: #faf0ca;
 }
+h1 {
+  font-family: 'Julius Sans One', sans-serif;
+  padding-top: 15px;
+  color:#1f3960;
+}
 h3 {
   padding-top: 30px;
   text-align: center;
   color: #1f3960;
+  font-family: 'Julius Sans One', sans-serif;
 }
 
 h5 {
   color: white;
   text-align: center;
+  font-family: 'Dancing Script', cursive;
 }
 p {
   color: black;
   font-size: 16px;
+  font-family: 'Julius Sans One', sans-serif;
 }
 
 button {
@@ -23,6 +31,8 @@ button {
   background-color: transparent;
   color: white;
   border: none;
+  font-family: 'Julius Sans One', sans-serif;
+  
 }
 
 button:hover {
@@ -30,6 +40,9 @@ button:hover {
   padding: 10px;
 }
 
+th, td {
+  font-family: 'Julius Sans One', sans-serif;
+}
 .nav-ctr {
   display: flex;
   justify-content: center;
@@ -38,7 +51,9 @@ button:hover {
   height: 110px;
   padding-right: 100px;
   padding-left: 100px;
+  padding-top: 20px;
 }
+
 
 .header-logo {
   margin-left: 0px;
@@ -166,6 +181,7 @@ button:hover {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+
 }
 .user-image {
  padding-right: 3px;
@@ -178,7 +194,9 @@ button:hover {
 }
 
 .user-name{
-  font-size: 20px;
+  font-size: 18px;
+  padding-top: 3px;
+  font-family: 'Julius Sans One', sans-serif;
 }
 
 .clickme {
@@ -194,6 +212,7 @@ button:hover {
 
 .my-trips-btn {
   padding: 25px;
+
 }
 
 
@@ -271,12 +290,14 @@ button:hover {
 .details-type {
   font-weight: bold;
   font-size: 20px;
+  font-family: 'Julius Sans One', sans-serif;
 }
 
 .card-title {
   font-weight: bolder;
   font-size: 30px;
   color:#ff551d;
+  font-family: 'Dancing Script', cursive;
 }
 
 .page-ctr {
@@ -287,4 +308,32 @@ button:hover {
 .row {
   margin-right: 50px;
   margin-left: 50px;
+}
+
+.index-ctr {
+  padding-left: 250px;
+  padding-right: 250px;
+}
+
+#card-content, #card-action {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5;
+  margin: 0;
+}
+
+#index-card-title {
+  color:#1f3960;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Dancing Script', cursive;
+  
+}
+
+#index-card-title:hover {
+  padding: 5px;
+  font-size: 26px;
+  background-color: white;
 }

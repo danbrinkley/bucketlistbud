@@ -33,31 +33,30 @@
     </div>
   </nav>
    
-<h1 class="center">All Trips</h1>
-
+<h1 class="center">ALL TRIPS</h1>
+<div class="index-ctr">
 <% if (trips.length) { %>
   <div class="row">  
-  <% trips.forEach(trip => { %>
-   <div class="col s4 m3">
-    <div class="card">
-      <div class="card-image">
+    <% trips.forEach(trip => { %>
+    <div class="col s5 m4">
+      <div class="card">
+        <div class="card-image">
+          
+          <img src="https://source.unsplash.com/800x600/?travel" alt="luggage">
+          
+        </div>
         
-                <img src="/images/luggage.jpg" alt="luggage">
-                <button class="clickme" id="clickme">👍 0</button>
-                <span class="card-title"><h5><%= trip.title %></h5></span>
-              </div>
-
-                <div class="card-content">
+        <div class="card-content" id="card-content">
+                  <span class="card-title"><a href="/trips/<%= trip._id %>"><button id="index-card-title">"<%= trip.title %>"</button></span></a>
+                </div>
+                <div class="card-action" id="card-action">
                   <div class="user-image">
                   <img src="<%= trip.user.image %>" alt="profile-image" class="circle small">
                   </div>
-
+  
                   <div class="user-name">
                   <a href="/trips/user/<%= user._id %>"><%= trip.user.name %></a>
                   </div>
-                </div>
-                  <div class="card-action">
-                  <a href="/trips/<%= trip._id %>" class="btn blue small">Details</a>
                 </div>
               </div> 
               </div>
@@ -69,11 +68,11 @@
                 </div>
                 </div>
       </div>            
-    
+    </div>
           
   
 <div class="fixed-action-btn">
-  <a href="/trips/new" class="btn-floating btn-large waves-effect waves-light blue"><i class="fas fa-plus"></i></a>
+  <a href="/trips/new" class="btn-floating btn-large waves-effect waves-light orange"><i class="fas fa-plus"></i></a>
 </div>               
 <%- include('../partials/footer') %>
  
